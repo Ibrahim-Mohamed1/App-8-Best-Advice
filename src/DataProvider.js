@@ -15,7 +15,9 @@ class DataProvider extends Component {
             this.setState({
                 advice: res.data.slip.advice
             })
-        })
+        }).catch(function (error) { 
+            window.location.reload() 
+        });
     }
 
     render() {
